@@ -7,7 +7,7 @@ import numpy as np
 from Cmodels import Generator, Discriminator
 from Cdata_loader import get_dataloader
 
-device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu") #luka skenderija
 
 def train_gan(num_epochs=300, batch_size=64, lr=0.0001, betas=(0.5, 0.999), save_images_interval=5):
     dataloader = get_dataloader(batch_size=batch_size, image_size=(128, 128))  # 128x128 veličina slike
