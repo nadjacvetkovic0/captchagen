@@ -15,6 +15,6 @@ def load_images(root_dir, image_size=(128, 128)):  # Promenjeno na 128x128
     return dataset
 
 def get_dataloader(batch_size=64, image_size=(128, 128)):  # Promenjeno na 128x128
-    dataset = load_images('ProjektniRN/DataSets/Banana', image_size)
+    dataset = load_images('ProjektniRN/DataSets/Mandarine', image_size)
     dataloader = DataLoader(dataset, batch_size=batch_size, shuffle=True)
     return dataloader

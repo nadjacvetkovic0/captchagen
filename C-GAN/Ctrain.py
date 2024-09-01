@@ -9,7 +9,7 @@ from Cdata_loader import get_dataloader
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-def train_gan(num_epochs=200, batch_size=64, lr=0.0001, betas=(0.5, 0.999), save_images_interval=5):
+def train_gan(num_epochs=100, batch_size=64, lr=0.0001, betas=(0.5, 0.999), save_images_interval=1):
     dataloader = get_dataloader(batch_size=batch_size, image_size=(128, 128))  # 128x128 veličina slike
 
     # Initialize networks and move them to the GPU if available
@@ -21,8 +21,8 @@ def train_gan(num_epochs=200, batch_size=64, lr=0.0001, betas=(0.5, 0.999), save
     optimizerG = optim.Adam(netG.parameters(), lr=lr, betas=betas)
 
     # Create a folder to save generated images
-    if not os.path.exists('ProjektniRN/Training/TrainingBanana4'):
-        os.makedirs('ProjektniRN/Training/TrainingBanana4')
+    if not os.path.exists('ProjektniRN/Training100x100/Mandarina'):
+        os.makedirs('ProjektniRN/Training100x100/Mandarina')
 
     for epoch in range(num_epochs):
         for i, (real_images, _) in enumerate(dataloader):
@@ -62,8 +62,8 @@ def train_gan(num_epochs=200, batch_size=64, lr=0.0001, betas=(0.5, 0.999), save
         if (epoch + 1) % save_images_interval == 0:
             save_generated_images(netG, epoch + 1)
 
-def save_generated_images(generator, epoch, num_images=64):
-    folder_name = f'ProjektniRN/Training/TrainingBanana4/epoch_{epoch}'
+def save_generated_images(generator, epoch, num_images=100): #broj slika koji se cuva
+    folder_name = f'ProjektniRN/Training100x100/Mandarina/epoch_{epoch}'
     if not os.path.exists(folder_name):
         os.makedirs(folder_name)
 
@@ -78,7 +78,7 @@ def save_generated_images(generator, epoch, num_images=64):
         image = torch.clamp(image, 0, 1)  # Ensure the image values are between 0 and 1
         plt.imshow(np.transpose(image.numpy(), (1, 2, 0)))
         plt.axis('off')
-        plt.savefig(os.path.join(folder_name, f'banana_{i+1}.png'))
+        plt.savefig(os.path.join(folder_name, f'mandarina_{epoch}_{i+1}.png'))
         plt.close()
 
 if __name__ == "__main__":
