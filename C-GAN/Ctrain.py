@@ -82,4 +82,4 @@ def save_generated_images(generator, epoch, num_images=100): #broj slika koji se
         plt.close()
 
 if __name__ == "__main__":
-    train_gan()
+    train_gan() #otpocinje da trenira gan
