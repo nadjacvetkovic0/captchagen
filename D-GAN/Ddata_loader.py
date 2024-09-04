@@ -2,7 +2,7 @@ import os
 import torch
 from torchvision import datasets, transforms
 
-def get_data_loader(image_dir, batch_size=64, image_size=100):
+def get_data_loader(image_dir, batch_size=64, image_size=100): #loaduje
     transform = transforms.Compose([
         transforms.Resize((image_size, image_size)),
         transforms.ToTensor(),
