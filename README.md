@@ -1,14 +1,17 @@
-*Fruit Image Generator*
-This project was originally designed for generating CAPTCHA images using a C-GAN (Composite Generative Adversarial Network). The goal is to showcase how a C-GAN can generate new CAPTCHA images based on predefined source images.
+# Fruit Image Generator
 
-Project Overview
-Generating CAPTCHAs is becoming increasingly complex. In this project, we utilize C-GAN to generate new CAPTCHA images, trained on a fruit dataset sourced from Kaggle.
+Ovaj projekat je originalno napravljen za generisanje CAPTCHA slika korišćenjem **C-GAN (Composite Generative Adversarial Network)**. Cilj je da se pokaže kako C-GAN generiše nove CAPTCHA slike na osnovu unapred definisanih slika iz baze.
 
-Link to the dataset:
+## Pregled projekta
+
+Generisanje CAPTCHA slika postaje sve kompleksnije. U ovom projektu, koristimo C-GAN kako bismo generisali nove CAPTCHA slike, trenirane na bazi slika voća preuzetih sa Kaggle-a.
+
+**Link do baze podataka:**  
 https://www.kaggle.com/datasets/moltean/fruits?resource=download
 
-Testing the Generated Images
-To evaluate the quality of the C-GAN generated images, we used the ResNet50 CNN model. Additionally, human evaluation was conducted through a negative test, linked below.
+## Testiranje generisanih slika
 
-Human evaluation test:
+Za testiranje kvaliteta slika generisanih C-GAN mrežom, koristili smo **ResNet50 CNN** model. Pored toga, ljudsko testiranje je sprovedeno kroz negativni test, čiji link se nalazi ispod.
+
+**Test za ljudsku evaluaciju:**  
 https://forms.gle/9Zxu19NgeiU7qFxn9
